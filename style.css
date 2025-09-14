@@ -278,6 +278,33 @@ nav .Navigation a span {
 }
 
 /* Responsive Breakpoints */
+/* Project Cards */
+@media (max-width: 768px) {
+    .card-container {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .card {
+        width: 45%; /* make 2 cards per row */
+    }
+
+    .card-heading {
+        font-size: 18px;
+    }
+
+    .card-category {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .card-background {
+        background-size: cover; /* ensure full coverage */
+        background-position: center;
+        transform: none !important; /* stop hover zoom breaking layout */
+    }
+}
+
 /* Home */
 @media (max-width: 850px) {
     .Home .text h2 {
@@ -382,5 +409,28 @@ nav .Navigation a span {
 
     .project-intro .project-intro-text {
         font-size: 15px;
+    }
+
+    /* Project cards */
+    .card {
+        width: 100%; /* 1 card per row */
+    }
+
+    .card-heading {
+        font-size: 16px;
+    }
+
+    .card-category {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .content {
+        padding: 15px; /* smaller padding for text */
+    }
+
+    .card-background {
+        background-size: cover;
+        background-position: center;
     }
 }
