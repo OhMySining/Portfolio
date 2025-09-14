@@ -199,8 +199,9 @@ nav .Navigation a span {
     min-height: 100%;
     align-items: center;
     justify-content: center;
-    background-color: #eeeff1;
+    background-color: var(--background-color);
     margin-inline-end: 10px;
+    margin: 10px 10px;
 }
 
 .card-container {
@@ -215,8 +216,6 @@ nav .Navigation a span {
     list-style: none;
     width: 220px;
     transition: .3s ease;
-    margin-left: 20px;
-
 }
 
 .card::before {
@@ -233,19 +232,17 @@ nav .Navigation a span {
     left: 0;
     top: 0;
     border-radius: 20px;
-    background-size: 350px;
+    background-size: 100%;
     background-position: center;
     filter: brightness(.9) saturate(1) contrast(1);
     transform-origin: bottom;
     transform: scale(1) translateZ(0);
     transition: .3s ease;
 }
-
 .card:hover .card-background {
     transform: scale(1.15) translateZ(0);
-    background-size: 240px;
+    background-size: 80%;
 }
-
 .card-container:hover .card:not(:hover){
     transform: scale(.9);
 }
@@ -308,7 +305,8 @@ nav .Navigation a span {
     }
 
     nav .Navigation a:last-child {
-        color: var(--text-color);
+        color: var(--link-color);
+        /* On mobile, remove background color for last navigation link */
         background-color: transparent;
         padding: 0;
     }
