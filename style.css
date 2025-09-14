@@ -180,6 +180,12 @@ nav .Navigation a span {
 
 /* Projects */
 .project-intro {
+    display: flex;
+    flex-direction: column;     /* Stack intro text vertically */
+    justify-content: flex-start;
+    align-items: flex-end;      /* Align text to the right */
+    flex: 1 1 300px;            /* Allow intro to grow/shrink */
+    min-width: 250px;
     padding: 0 50px;
     margin-bottom: 53px;
 }
@@ -190,27 +196,31 @@ nav .Navigation a span {
 }
 
 .project-intro .project-intro-text {
-    text-align: right;
+    text-align: left;
     margin-bottom:30px;
 }
 
 .project-selection {
     display: flex;
-    min-height: 100%;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;        /* Arrange children side by side */
+    flex-wrap: wrap;            /* Allow wrapping on smaller screens */
+    align-items: flex-start;    /* Align items to the top */
+    justify-content: center;    /* Center children horizontally */
+    gap: 40px;                  /* Space between children */
     background-color: var(--background-color);
-    margin-inline-end: 10px;
-    margin: 10px 10px;
-    margin-bottom: 50px;
+    margin: 10px 10px 50px 10px;
     padding-bottom: 50px;
+    min-height: 100%;
 }
 
 .card-container {
     display: flex;
+    flex-direction: row;        /* Cards in a row */
+    flex-wrap: wrap;            /* Wrap cards on small screens */
     gap: 30px;
-    width: 100%;
     justify-content: center;
+    align-items: stretch;       /* Cards stretch to same height */
+    width: auto;
 }
 
 .card {
@@ -259,10 +269,10 @@ nav .Navigation a span {
     left: 0;
     padding: 25px;
     position: absolute;   
+    color: var(--background-color);
 }
 
 .card-category {
-    color: #000000;
     font-size: 12px;
     font-weight: 500;
     letter-spacing: 5px;
@@ -271,7 +281,6 @@ nav .Navigation a span {
 }
 
 .card-heading {
-    color: #000000;
     font-size: 25px;
     line-height: 1;
     text-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
@@ -432,5 +441,100 @@ nav .Navigation a span {
     .card-background {
         background-size: cover;
         background-position: center;
+    }
+}
+
+/* Project Selection Flexbox Layout */
+.project-selection {
+    display: flex;
+    flex-direction: row;       
+    flex-wrap: wrap;          
+    align-items: flex-start;    
+    justify-content: center;    
+    gap: 40px;                  
+    background-color: var(--background-color);
+    margin: 10px 10px 50px 10px;
+    padding-bottom: 50px;
+    min-height: 100%;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;        
+    flex-wrap: wrap;            
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;      
+    width: auto;
+}
+
+.project-intro {
+    display: flex;
+    flex-direction: column;     
+    justify-content: flex-start;
+    align-items: flex-end;     
+    flex: 1 1 300px;           
+    min-width: 250px;
+    padding: 0 50px;
+    margin-bottom: 53px;
+}
+
+/* Fix project-selection children overlap */
+.project-selection {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    background-color: var(--background-color);
+    margin: 10px 10px 50px 10px;
+    padding-bottom: 50px;
+    min-height: 100%;
+}
+
+.card-container {
+    flex: 2 1 400px;     
+    min-width: 300px;    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+    width: auto;
+}
+
+.project-intro {
+    flex: 1 1 250px;      
+    min-width: 220px;
+    max-width: 400px;     
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0 50px;
+    margin-bottom: 53px;
+    box-sizing: border-box;
+}
+
+/* Responsive: Stack vertically on small screens */
+@media (max-width: 900px) {
+    .project-selection {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+    }
+    .project-intro {
+        align-items: flex-start;
+        padding: 0 20px;
+        margin-bottom: 20px;
+        max-width: 100%;
+        min-width: 0;
+    }
+    .card-container {
+        min-width: 0;
+        width: 100%;
+        gap: 20px;
     }
 }
