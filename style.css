@@ -57,6 +57,9 @@ nav .Navigation a {
     color: var(--text-color);
     margin: 0 10px;
 }
+nav .Navigation button i {
+    margin: 0 10px;
+}
 
 nav .Navigation a:last-child {
     color: var(--background-color);

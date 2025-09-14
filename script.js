@@ -11,3 +11,14 @@ toggleBtn.addEventListener('click', () => {
         icon.classList.add('fa-moon');
     }
 });
+
+//Smooth scrolling 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        // Add your smooth scrolling logic here if needed
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
