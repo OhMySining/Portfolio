@@ -203,6 +203,7 @@ nav .Navigation a span {
     margin-inline-end: 10px;
     margin: 10px 10px;
     margin-bottom: 50px;
+    padding-bottom: 50px;
 }
 
 .card-container {
