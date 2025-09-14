@@ -202,6 +202,7 @@ nav .Navigation a span {
     background-color: var(--background-color);
     margin-inline-end: 10px;
     margin: 10px 10px;
+    margin-bottom: 50px;
 }
 
 .card-container {
