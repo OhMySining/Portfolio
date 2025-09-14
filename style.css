@@ -133,6 +133,14 @@ nav .Navigation a span {
     border-radius: 50%;
 }
 
+p {
+    text-align: justify;
+    margin: 20px 25px 20px 5px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
 /* Skills */
 .skills-selection {
     padding: 0 50px;
@@ -196,7 +204,7 @@ nav .Navigation a span {
 }
 
 .project-intro .project-intro-text {
-    text-align: left;
+    text-align: right;
     margin-bottom:30px;
 }
 
@@ -512,7 +520,7 @@ nav .Navigation a span {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: flex-end;
     padding: 0 50px;
     margin-bottom: 53px;
     box-sizing: border-box;
