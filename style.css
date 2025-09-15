@@ -198,6 +198,7 @@ p {
 
 .skills-selection .cells .cell span {
     font-size: 18px;
+    color: var(--text-color);
 }
 
 /* Projects */
@@ -219,7 +220,7 @@ p {
 
 .project-intro .project-intro-text {
     text-align: right;
-    margin-bottom:30px;
+    margin-bottom: 30px;
 }
 
 .project-selection {
