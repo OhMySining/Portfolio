@@ -198,6 +198,7 @@ p {
 
 .skills-selection .cells .cell span {
     font-size: 18px;
+    color: var(--text-color);
 }
 
 /* Projects */
@@ -205,7 +206,7 @@ p {
     display: flex;
     flex-direction: column;     /* Stack intro text vertically */
     justify-content: flex-start;
-    align-items: flex-end;      /* Align text to the right */
+    align-items: flex-start;      /* Align text to the right */
     flex: 1 1 300px;            /* Allow intro to grow/shrink */
     min-width: 250px;
     padding: 0 50px;
@@ -219,7 +220,7 @@ p {
 
 .project-intro .project-intro-text {
     text-align: right;
-    margin-bottom:30px;
+    margin-bottom: 30px;
 }
 
 .project-selection {
