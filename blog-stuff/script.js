@@ -23,21 +23,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Scroll reveal for sections
-document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('.section-hidden');
-    const revealSection = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('section-visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    };
-    const observer = new IntersectionObserver(revealSection, {
-        threshold: 0.15
-    });
-    sections.forEach(section => {
-        observer.observe(section);
-    });
+// Hide loader when page is fully loaded
+window.addEventListener('load', () => {
+    const loader = document.getElementById('loader');
+    if (loader) {
+        loader.style.opacity = '0';
+        setTimeout(() => loader.style.display = 'none', 400);
+    }
 });
