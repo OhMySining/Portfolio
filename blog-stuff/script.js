@@ -31,3 +31,6 @@ window.addEventListener('load', () => {
         setTimeout(() => loader.style.display = 'none', 400);
     }
 });
+
+//SAL animations
+sal();
