@@ -311,6 +311,11 @@ p {
 
 /* Contact */
 /* Center align h1 and p in contact section */
+.contact-selection {
+    padding-bottom: 50px;
+    margin-bottom: 100px;
+}
+
 .contact-selection h1,
 .contact-selection p {
     text-align: center;
