@@ -309,6 +309,48 @@ p {
     text-shadow: 2px 2px 20px rgba(0, 0, 0, .2);
 }
 
+/* Contact */
+/* Center align h1 and p in contact section */
+.contact-selection h1,
+.contact-selection p {
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* Make contact-info-upper-container flex */
+.contact-info-upper-container {
+  width: fit-content;        
+  max-width: 500px;         
+  height: auto;             
+  display: flex;
+  justify-content: center;
+  align-items: center;     
+  gap: 15px;                 
+  border-radius: 2rem;
+  border-width: 0.1rem;
+  border-style: solid;
+  border-color: var(--text-color);
+  margin: 1rem auto;       
+  padding: 0.5rem 1rem;       
+}
+
+.contact-info-container {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.contact-info-container a {
+    color: var(--text-color);
+    font-size: 18px;
+}
+
+.contact-info-upper-container img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
 /* Responsive Breakpoints */
 /* Project Cards */
 @media (max-width: 768px) {
