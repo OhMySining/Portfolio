@@ -1,3 +1,4 @@
+
 :root {
     --text-color: #1a1c20;
     --link-color: #b97a04;
@@ -73,6 +74,15 @@ nav .Navigation a span {
 }
 
 /* Home */
+@media (max-width: 600px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+}
 .Home {
     display: flex;
     justify-content: space-between;
@@ -628,4 +638,35 @@ body.dark-mode #darkModeToggle{
 .section-visible {
     opacity: 1;
     transform: none;
+}
+
+@media (max-width: 900px) {
+    .contact-info-upper-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 10px;
+    }
+    .contact-info-container {
+        width: 100%;
+        max-width: 350px;
+        justify-content: flex-start;
+        padding: 10px 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact-info-upper-container {
+        padding: 5px;
+        gap: 12px;
+    }
+    .contact-info-container {
+        max-width: 100%;
+        font-size: 15px;
+        padding: 8px 8px;
+    }
+    .contact-info-upper-container img {
+        width: 28px;
+        height: 28px;
+    }
 }
